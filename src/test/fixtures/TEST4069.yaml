@@ -1,0 +1,103 @@
+partNumber: TEST4069
+series: '4000'
+name: Test Hex Inverter
+description: Minimal fixture IC for PinoutDiagram component tests.
+package:
+  type: DIP-14
+  pinCount: 14
+pins:
+  - number: 1
+    name: A1
+    function: Input 1
+    direction: input
+    side: left
+  - number: 2
+    name: Y1
+    function: Output 1
+    direction: output
+    side: left
+  - number: 3
+    name: A2
+    function: Input 2
+    direction: input
+    side: left
+  - number: 4
+    name: Y2
+    function: Output 2
+    direction: output
+    side: left
+  - number: 5
+    name: A3
+    function: Input 3
+    direction: input
+    side: left
+  - number: 6
+    name: Y3
+    function: Output 3
+    direction: output
+    side: left
+  - number: 7
+    name: VSS
+    function: Ground
+    direction: ground
+    side: left
+  - number: 8
+    name: Y4
+    function: Output 4
+    direction: output
+    side: right
+  - number: 9
+    name: A4
+    function: Input 4
+    direction: input
+    side: right
+  - number: 10
+    name: Y5
+    function: Output 5
+    direction: output
+    side: right
+  - number: 11
+    name: A5
+    function: Input 5
+    direction: input
+    side: right
+  - number: 12
+    name: Y6
+    function: Output 6
+    direction: output
+    side: right
+  - number: 13
+    name: A6
+    function: Input 6
+    direction: input
+    side: right
+  - number: 14
+    name: VDD
+    function: Power
+    direction: power
+    side: right
+subcircuits:
+  - id: inv1
+    type: not
+    inputs: [1]
+    output: 2
+  - id: inv2
+    type: not
+    inputs: [3]
+    output: 4
+  - id: inv3
+    type: not
+    inputs: [5]
+    output: 6
+  - id: inv4
+    type: not
+    inputs: [9]
+    output: 8
+  - id: inv5
+    type: not
+    inputs: [11]
+    output: 10
+  - id: inv6
+    type: not
+    inputs: [13]
+    output: 12

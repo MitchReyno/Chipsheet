@@ -1,0 +1,96 @@
+partNumber: CD4011
+series: '4000'
+name: Quad 2-Input NAND Gate
+description: Four independent 2-input NAND gates in a single DIP-14 package.
+datasheetUrl: https://www.ti.com/lit/ds/symlink/cd4011b.pdf
+package:
+  type: DIP-14
+  pinCount: 14
+pins:
+  - number: 1
+    name: A1
+    function: Gate A input 1
+    direction: input
+    side: left
+  - number: 2
+    name: B1
+    function: Gate A input 2
+    direction: input
+    side: left
+  - number: 3
+    name: Y1
+    function: Gate A output
+    direction: output
+    side: left
+  - number: 4
+    name: Y2
+    function: Gate B output
+    direction: output
+    side: left
+  - number: 5
+    name: B2
+    function: Gate B input 2
+    direction: input
+    side: left
+  - number: 6
+    name: A2
+    function: Gate B input 1
+    direction: input
+    side: left
+  - number: 7
+    name: VSS
+    function: Negative supply / ground
+    direction: ground
+    side: left
+  - number: 8
+    name: A3
+    function: Gate C input 1
+    direction: input
+    side: right
+  - number: 9
+    name: B3
+    function: Gate C input 2
+    direction: input
+    side: right
+  - number: 10
+    name: Y3
+    function: Gate C output
+    direction: output
+    side: right
+  - number: 11
+    name: Y4
+    function: Gate D output
+    direction: output
+    side: right
+  - number: 12
+    name: B4
+    function: Gate D input 2
+    direction: input
+    side: right
+  - number: 13
+    name: A4
+    function: Gate D input 1
+    direction: input
+    side: right
+  - number: 14
+    name: VDD
+    function: Positive supply voltage
+    direction: power
+    side: right
+subcircuits:
+  - id: nandA
+    type: nand
+    inputs: [1, 2]
+    output: 3
+  - id: nandB
+    type: nand
+    inputs: [5, 6]
+    output: 4
+  - id: nandC
+    type: nand
+    inputs: [8, 9]
+    output: 10
+  - id: nandD
+    type: nand
+    inputs: [12, 13]
+    output: 11

@@ -1,0 +1,92 @@
+partNumber: CD4040
+series: '4000'
+name: 12-Stage Ripple Carry Binary Counter
+description: >
+  12-stage binary ripple carry counter with active-high master reset. Each rising
+  clock edge advances the counter; Q1–Q12 provide binary-weighted outputs for
+  frequency division (divide-by-2 through divide-by-4096).
+datasheetUrl: https://www.ti.com/lit/ds/symlink/cd4040b.pdf
+package:
+  type: DIP-16
+  pinCount: 16
+pins:
+  - number: 1
+    name: Q12
+    function: Counter output stage 12 (MSB)
+    direction: output
+    side: left
+  - number: 2
+    name: Q6
+    function: Counter output stage 6
+    direction: output
+    side: left
+  - number: 3
+    name: Q5
+    function: Counter output stage 5
+    direction: output
+    side: left
+  - number: 4
+    name: Q7
+    function: Counter output stage 7
+    direction: output
+    side: left
+  - number: 5
+    name: Q4
+    function: Counter output stage 4
+    direction: output
+    side: left
+  - number: 6
+    name: Q3
+    function: Counter output stage 3
+    direction: output
+    side: left
+  - number: 7
+    name: Q2
+    function: Counter output stage 2
+    direction: output
+    side: left
+  - number: 8
+    name: VSS
+    function: Negative supply / ground
+    direction: ground
+    side: left
+  - number: 9
+    name: Q1
+    function: Counter output stage 1 (LSB)
+    direction: output
+    side: right
+  - number: 10
+    name: MR
+    function: Master reset (active high)
+    direction: input
+    side: right
+  - number: 11
+    name: CLK
+    function: Clock input (falling edge triggered)
+    direction: input
+    side: right
+  - number: 12
+    name: Q11
+    function: Counter output stage 11
+    direction: output
+    side: right
+  - number: 13
+    name: Q10
+    function: Counter output stage 10
+    direction: output
+    side: right
+  - number: 14
+    name: Q8
+    function: Counter output stage 8
+    direction: output
+    side: right
+  - number: 15
+    name: Q9
+    function: Counter output stage 9
+    direction: output
+    side: right
+  - number: 16
+    name: VDD
+    function: Positive supply voltage
+    direction: power
+    side: right

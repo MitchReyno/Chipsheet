@@ -1,0 +1,104 @@
+partNumber: CD4069
+series: '4000'
+name: Hex Inverter
+description: Six independent inverter (NOT) gates in a single DIP-14 package.
+datasheetUrl: https://www.ti.com/lit/ds/symlink/cd4069ub.pdf
+package:
+  type: DIP-14
+  pinCount: 14
+pins:
+  - number: 1
+    name: A1
+    function: Inverter 1 input
+    direction: input
+    side: left
+  - number: 2
+    name: Y1
+    function: Inverter 1 output
+    direction: output
+    side: left
+  - number: 3
+    name: A2
+    function: Inverter 2 input
+    direction: input
+    side: left
+  - number: 4
+    name: Y2
+    function: Inverter 2 output
+    direction: output
+    side: left
+  - number: 5
+    name: A3
+    function: Inverter 3 input
+    direction: input
+    side: left
+  - number: 6
+    name: Y3
+    function: Inverter 3 output
+    direction: output
+    side: left
+  - number: 7
+    name: VSS
+    function: Negative supply / ground
+    direction: ground
+    side: left
+  - number: 8
+    name: Y4
+    function: Inverter 4 output
+    direction: output
+    side: right
+  - number: 9
+    name: A4
+    function: Inverter 4 input
+    direction: input
+    side: right
+  - number: 10
+    name: Y5
+    function: Inverter 5 output
+    direction: output
+    side: right
+  - number: 11
+    name: A5
+    function: Inverter 5 input
+    direction: input
+    side: right
+  - number: 12
+    name: Y6
+    function: Inverter 6 output
+    direction: output
+    side: right
+  - number: 13
+    name: A6
+    function: Inverter 6 input
+    direction: input
+    side: right
+  - number: 14
+    name: VDD
+    function: Positive supply voltage
+    direction: power
+    side: right
+subcircuits:
+  - id: inv1
+    type: not
+    inputs: [1]
+    output: 2
+  - id: inv2
+    type: not
+    inputs: [3]
+    output: 4
+  - id: inv3
+    type: not
+    inputs: [5]
+    output: 6
+  - id: inv4
+    type: not
+    inputs: [9]
+    output: 8
+  - id: inv5
+    type: not
+    inputs: [11]
+    output: 10
+  - id: inv6
+    type: not
+    inputs: [13]
+    output: 12
